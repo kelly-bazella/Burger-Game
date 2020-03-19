@@ -1,0 +1,23 @@
+{
+  "name": "burger-game",
+  "version": "1.0.0",
+  "description": "Burger game where user enters in name of burger, then chooses when to devour it. Everything saved to the database.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelly-bazella/Burger-Game.git"
+  },
+  "author": "Kelly Bazella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelly-bazella/Burger-Game/issues"
+  },
+  "homepage": "https://github.com/kelly-bazella/Burger-Game#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
