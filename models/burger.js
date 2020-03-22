@@ -6,16 +6,16 @@ var burger = {
             cb(res);
         })
     },
-    //"cb" needs to be replaced with variable values
-    insertOne: function(burger_name, devoured){
-        orm.insertOne("burgers", function(res){
-            cb(res);
+    
+    insertOne: function(burger_name, cb){
+        orm.insertOne(burger_name, false, function(result){
+            cb(result);
         })
     },
-    //"cb" needs to be replaced with variable values
-    updateOne: function(cb){
-        orm.updateOne("burgers", function(res){
-            cb(res);
+
+    updateOne: function(id, cb){
+        orm.updateOne("devoured=true", "id="+id, function(result){
+            cb(result);
         })
     }
 }

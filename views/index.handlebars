@@ -1,7 +1,25 @@
+<h2>Burger Menu</h2>
+<ul>
 {{#each burgers}}
-<p>{{this.burger_name}}</p>
+{{#unless this.devoured}}
+<li>{{this.burger_name}} <button type= "submit" value="{{this.id}}" class="burger-button">Devour</button></li>
+{{/unless}}
 {{/each}}
+</ul>
+
+<h2>Devoured</h2>
+<ul>
+{{#each burgers}}
+{{#if this.devoured}}
+<li>{{this.burger_name}}</li>
+{{/if}}
+{{/each}}
+</ul>
 
 <h1> Add a Burger </h1>
-<input type = "text" id = "userInput" name= "burgerName" placeholder = "Enter Burger Name Here...">
-<button type="button" id= "submitBurger" class="btn btn-secondary">Submit</button>
+<form action="/add" method="POST">
+<input type = "text" id = "userInput" name= "burger_name" placeholder = "Enter Burger Name Here...">
+<button type="submit" id= "submitBurger" class="btn btn-secondary">Submit</button>
+</form>
+<br>
+<br>
