@@ -13,8 +13,8 @@ var burger = {
         })
     },
 
-    updateOne: function(id, cb){
-        orm.updateOne("devoured=true", "id="+id, function(result){
+    updateOne: function(objColVals, cb){
+        orm.updateOne("cats", objColVals, condition, function(result){
             cb(result);
         })
     }
