@@ -31,12 +31,12 @@ router.post("/add", function(req,res){
 // })
 
 router.put("/update/:id", function(req, res){
-    var condition = "id =" + req.params.id;
-    console.log("condition",condition)
-    burger.updateOne({
-        devoured:req.body.devoured
+    var condition = "id = " + req.params.id;
+    console.log("condition", condition)
+    burger.updateOne("burgers", {
+        devoured: req.body.devoured
     }, condition, function(result){
-        if (result.changedRows == 0){
+        if (result.changedRows === 0){
             return res.status(400).end();
         }else{
             res.status(200).end();

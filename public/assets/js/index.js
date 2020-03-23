@@ -1,21 +1,26 @@
 // click event
 $(document).ready(function() {
-    $("#burger-button").on("click", function(event){
+    $(".burger-button").on("click", function(event){
         event.preventDefault();
         console.log("I WAS CLICKED!")
-        var id = $(this).data("id");
-        
-        var nowDevoured = $(this).data("nowdevoured")
-
+        // var id = $(this).data("id"); 
+            //undefined
+        // var id = event.target.id; 
+            //not read at all
+        var id = $(this).attr("id"); 
+            //undefined
+        // var id = $(this).get(0).id; 
+            // not read at all
+        console.log(id)
         var nowDevouredState = {
-            devoured: true
+            devoured: 1
         };
 
-    $ajax("/update/" + id, {
-        type:"PUT",
+    $.ajax("/update/" + id, {
+        type: "PUT",
         data: nowDevouredState
     }).then(function(){
-        console.log("changed burger to ", nowDevoured)
+        console.log("You ate the burger")
         location.reload();
     })
 });
