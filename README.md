@@ -13,3 +13,10 @@ AS a USER
 I want to enter a burger name
 THEN click devour to move it to the other side of the screen
 ```
+
+## Languages Used
+- JavaScript
+- HTML
+- CSS
+
+
