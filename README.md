@@ -20,4 +20,4 @@ THEN click devour to move it to the other side of the screen
 - CSS
 
 ## GIF 
-![](demo.gif)
+![](/img/demo.gif)
